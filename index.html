@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculadora</title>		
+		<script src="js/script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+        <div class="container">
+
+		    <div class="titulo">
+                <h1 class="titulo">Calculadora Completa</h1>
+            </div>
+
+            <div class="logo">
+                <figure class="logo">
+                    <img class="logo" src="imagens/icone_calc.png" alt="">
+                </figure>
+            </div>
+
+            <div class="subtitulo">
+                <h6 class="subtitulo">Aqui você pode fazer alguns cálculos diferentes selecionando os operadores que deseja.</h2>
+            </div>
+
+            <div class="inputs">
+                <div class="input1">
+		            <input placeholder="Primeiro Número" class="input1" type="text" id="txtValor1">
+                </div>
+
+                <div class="input2">
+		            <input placeholder="Segundo Número" class="input2" type="text" id="txtValor2">
+                </div>
+            </div>
+
+            <div class="ops">
+			    <select class="filtro_select" id="operadores" onchange="Selecionar_OPS();">
+				    <optgroup class="filtro_select" label="Básico">
+					    <option class="filtro_select" value="+">Somar (+)</option>
+					    <option class="filtro_select" value="-">Subtrair (-)</option>
+					    <option class="filtro_select" value="*">Multiplicar (*)</option>
+					    <option class="filtro_select" value="/">Dividir (/)</option>
+				    </optgroup>
+				    <optgroup class="filtro_select" label="Outros">
+					    <option class="filtro_select" value="raiz">Raiz</option>
+					    <option class="filtro_select" value="potencia">Potência</option>					
+					    <option class="filtro_select" value="porcento">Porcentagem</option>
+					    <option class="filtro_select" value="calc">Cálculo Livre</option>
+				    </optgroup>
+			    </select>
+            </div>
+
+            <input class="botao_l" type="button" onclick="Limpar('txtValor1', 'txtValor2')" value="Limpar">
+		    <input class="botao_c" type="button" onclick="Calcular('txtValor1', 'txtValor2')" value="Calcular">
+		    
+            <div class="resultado">
+		        <p class="resultado" id="saida">Resultado:</p>
+            </div>
+
+            <div class="tema_escuro">
+                <input class="tema_escuro" type="checkbox" onclick="tema_escuro()">Tema Escuro</input>
+            </div>
+
+            <footer class="footer">
+                <div class="footer">
+                    <h4 class="footer">Desenvolvido por Nícolas A. K. Arend</h4>
+                </div>
+            </footer>
+        </div>	
+	</body>
+</html>
